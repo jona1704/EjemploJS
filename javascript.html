@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .btn{
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .calculadora{
+            width: 400px;
+            height: 150px;
+            background-color: rosybrown;
+            margin-bottom: 20px;
+        }
+
+        .calculadora .cantidades{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .calculadora .cantidades input[type="number"]{
+            width: 50px;
+            height: 30px;
+        }
+
+        .calculadora .operaciones{
+            width: 100%;
+            text-align: center;
+        }
+
+        .calculadora .operaciones button{
+            width: 80px;
+            height: 30px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Ejemplos de JavaScript</title>
+    <script>
+        // Ejemplo de Clase
+        class Persona{
+            // Propiedades
+            constructor(nombre, edad){
+               this.nombre = nombre;
+               this.edad = edad;
+            }
+
+            getNombre(){
+                return this.nombre;
+            }
+
+            getEdad(){
+                return this.edad;
+            }
+        }
+
+        var x = 10;
+        console.log("El numero es: " + x); // Generalmente se utiliza para pruebas
+        // Trabajar con funciones en JS
+        function mostrar(){
+            alert("Hola, buen día!!!");
+        }
+
+        function operaciones(ope){
+            var numero1 = parseInt(document.getElementById("numero1").value);
+            var numero2 = parseInt(document.getElementById("numero2").value);
+            switch(ope){
+                case "suma":
+                            document.getElementById("resultado").value = numero1 + numero2;
+                            break;
+                case "resta":
+                            document.getElementById("resultado").value = numero1 - numero2;
+                            break;
+                case "multiplicacion":
+                            document.getElementById("resultado").value = numero1 * numero2;
+                            break;
+                case "division":
+                            document.getElementById("resultado").value = numero1 / numero2;
+                            break;
+            }
+        }
+
+        // Funcion para arreglos
+        function arreglos(){
+            var arr_num = [34, 56, 21, 78, 23];
+            //alert(arr_num.length);
+            let parrafo = document.getElementById("arr_val");
+            //parrafo.innerHTML = "Numero de Elementos en el arreglo: " + arr_num.length;
+            arr_num.sort();
+            parrafo.innerHTML = arr_num.reverse();
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Elementos de HTML -->
+    <button class="btn" id="id_btn" onclick="mostrar()">Dame Click</button>
+    <div class="calculadora">
+        <h2>Operaciones Básicas</h2>
+        <div class="cantidades">
+            <input type="number" id="numero1" min="0" max="10"> op
+            <input type="number" id="numero2" min="0" max="10"> =
+            <input type="number" id="resultado" min="-10" max="20">
+        </div>
+        <div class="operaciones">
+            <button onclick='operaciones("suma")'>+</button>
+            <button onclick='operaciones("resta")'>-</button>
+            <button onclick='operaciones("multiplicacion")'>X</button>
+            <button onclick='operaciones("division")'>/</button>
+        </div>
+    </div>
+    <button class="btn1" id="id_btn1" onclick="arreglos();">Obtener Valor</button>
+    <p id="arr_val"></p>
+    <!-- Colocar codigo de JavaScript
+        DOM (Document Model Object)
+    -->
+    <script>
+        document.write("Hola Mundo");
+        let valor = false;
+        if(1 === "1"){
+            valor = true;
+        }
+        console.log(valor);
+        // Tipo de Operadores
+        let mensaje = "FES Acatlán";
+        let bandera = true;
+        let y = 1.5;
+        console.log(typeof(mensaje));
+        console.log(typeof(bandera));
+        console.log(typeof(y));
+        // Generando una instancia de clase
+        let obj = new Persona("Jonathan","37");
+        console.log("Nombre: " + obj.getNombre());
+        console.log("Edad: " + obj.getEdad());
+        console.log(obj instanceof Persona); // Retorna true o False
+        // Propiedades Matematicas
+        let r = 5;
+        console.log("PI: " + Math.PI);
+        console.log("El área del círculo es: " + (r**2 * Math.PI));
+        console.log("El área del círculo es: " + (Math.pow(r, 2) * Math.PI));
+        // Métodos Matemáticos
+            // Obteniendo la raiz cuadrada
+            console.log("La raiz de 14523: " + Math.round(Math.sqrt(14523)));
+            // Obteniendo el mayor
+            console.log("El numero mayor es: " + Math.max(56, 23, 45, 76, 21));
+            // Obteniendo el menor
+            console.log("El numero menor es: " + Math.min(56, 23, 45, 76, 21));
+            // Generando un arreglo
+            //let arr_num = [9, 4, 23, 12, -2];
+            //console.log("El numero menor es: " + Math.min(arr_num));
+    </script>
+</body>
+</html>
