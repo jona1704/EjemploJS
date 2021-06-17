@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor{
+            width: 80%;
+            height: 200px;
+            background-color: wheat;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .caja{
+            width: 20%;
+            height: 100px;
+            background-color:tomato;
+        }
+
+        .active{
+            width: 50%;
+        }
+
+        @media screen and (max-width: 800px){
+            .contenedor{
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .active{
+                margin-top: 20px;
+                flex: 1 0 100%; /* flex: flex_grow flex-shrink flex-basis*/
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="caja">1</div>
+        <div class="caja active">2</div>
+        <div class="caja">3</div>
+    </div>
+</body>
+</html>

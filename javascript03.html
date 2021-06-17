@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 3</title>
+    <link rel="stylesheet" href="css/otro_style.css">
+</head>
+<body id="body_js3">
+    <header>
+        Manejo de Eventos en JavaScript
+    </header>
+    <main>
+        <div id="contenedor_carga">
+            <div id="carga"></div>
+        </div>
+        <div class="fecha">
+            <span><b id="fecha"></b></span>
+            <span><b id="hora"></b></span>
+        </div>
+        <div class="conversor">
+            <h1>Conversor de Temperaturas JavaScript</h1>
+            <p>Grados Centigrados: <input type="number" id="celsius" onkeyup="convertir('C')" onchange="convertir('C')"></p>
+            <p>Grados Fahrenheit: <input type="number" id="fahrenheit" onkeyup="convertir('F')" onchange="convertir('F')"></p>
+            <p>Grados Kelvin: <input type="number" id="kelvin" onkeyup="convertir('K')" onchange="convertir('K')"></p>
+        </div>
+        <div class="imagen">
+            <img src="img/triste.png" alt="Emociones" onmouseover="onImg.call(this)" onmouseout="outImg.call(this)">
+        </div>
+        <form name="forma">
+            <select name="item_select" onchange="getOption()">
+                <option>Selecciona Juego</option>
+                <option value="Futbol">Futbol</option>
+                <option value="Basquetbol">Basquetbol</option>
+                <option value="Tenis">Tenis</option>
+                <option value="Voleibol">Voleibol</option>
+                <option value="Box">Box</option>
+            </select>
+        </form>
+        <label id="lbl_text"></label>
+    </main>
+    <script src="js/otro_script.js"></script>
+</body>
+</html>

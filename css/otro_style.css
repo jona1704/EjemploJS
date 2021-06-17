@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body_js3{
+    background: rgb(34,117,195);
+    background: radial-gradient(circle, rgba(34,117,195,1) 17%, rgba(221,152,25,0.53125) 44%, rgba(217,219,55,0.6460959383753502) 61%);
+}
+
+#contenedor_carga{
+    background-color: rgba(250, 240, 245, 0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed; /* Similar a relative */
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 15px solid #ccc;
+    border-top-color:tomato;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    /* Mas propiedades*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+header{
+    width: 90%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid navy;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.conversor, .fecha{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fecha{
+    font-size: 30px;
+}
+
+.conversor input{
+    height: 30px;
+}
+
+.imagen{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+main form{
+    margin-top: 30px;
+    text-align: center;
+}
+
+main label{
+    display: block;
+    margin: 30px auto;
+    width: 20%;
+    /*border: 2px solid red;*/
+    font-size: 30px
+}

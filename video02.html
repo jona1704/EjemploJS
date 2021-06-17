@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_videos.css">
+    <title>Videos</title>
+</head>
+<body>
+    <header>
+        <h1>Videos y Audios</h1>
+    </header>
+    <!--
+        loop: Una vez terminado el video se reinicia automáticamente
+        autoplay: Se inicia automáticamente una vez cargada la página web
+        muted: Silencia el video en el caso que este tenga sonido
+        controls: Inicializa los controles del video (play, stop, pause, etc..)
+
+    -->
+    <main>
+        <!-- Primera forma de cargar un video: -->
+        <video src="videos/clip01.mp4" loop autoplay muted controls></video>
+        <!-- Segunda forma de cargar un video y la más correcta: -->
+        <video loop autoplay muted controls>
+            <source src="videos/clip02.mp4" type="video/mp4">
+        </video>
+        <iframe id="iframeId01" src="https://www.youtube.com/embed/LP_2-m73rnQ?controls=1&mute=1&autoplay=1&playlist=LP_2-m73rnQ&loop=1" title="YouTube video player" frameborder="0"
+        allowfullscreen></iframe>
+        <iframe id="iframeId02" src="https://www.youtube.com/embed/l5KSsJKhU70?controls=1&mute=1&autoplay=1&playlist=l5KSsJKhU70&loop=1" title="YouTube video player" frameborder="0"
+        allowfullscreen></iframe>
+    </main>
+    <!--<audio src="audios/audio_jazz.webm" autoplay loop controls></audio>-->
+    <!-- Deshabilitada en Chrome en este momento -->
+    <audio id="audioID" controls loop>
+        <source src="audios/audio_jazz.mp3" type="audio/mp3">
+        Tu navegador no reproduce el audio
+    </audio>
+</body>
+</html>

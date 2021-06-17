@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(34,117,195);
+    background: radial-gradient(circle, rgba(34,117,195,1) 45%, rgba(250,253,45,1) 92%);
+}
+
+header{
+    width: 90%;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid black;
+}
+
+main{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+video, iframe{
+    padding-top: 20px;
+    height: 300px;
+    width: 600px;
+    /*margin: auto;
+    display: block;*/
+}
+
+audio{
+    width: 50%;
+    padding-top: 20px;
+    margin: auto;
+    display: block;
+}

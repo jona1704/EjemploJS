@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_2_videos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <video class="clips" muted loop id="video1">
+                <source src="videos/clip01.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">
+            <video class="clips" muted loop id="video2">
+                <source src="videos/clip02.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">
+            <video class="clips" muted loop id="video3">
+                <source src="videos/clip03.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="box">
+            <video class="clips" muted loop id="video4">
+                <source src="videos/clip04.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script>
+        /*function playPause(videoID){
+            var myVideo=document.getElementById(videoID);
+            if (myVideo.paused) myVideo.play();
+            else myVideo.pause();
+        }*/
+        const clips = document.querySelectorAll(".clips");
+        for(let i=0; i<clips.length; i++){
+            clips[i].addEventListener("mouseover", function(e){
+                clips[i].play();
+            })
+
+            clips[i].addEventListener("mouseout", function(e){
+                clips[i].pause();
+            })
+        }
+    </script>
+</body>
+</html>
